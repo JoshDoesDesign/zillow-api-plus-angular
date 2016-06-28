@@ -1,0 +1,13 @@
+
+select {
+	float: left;
+	margin-right: 5px;
+}
+
+.stateTitle {
+	margin-top: 0;
+}
+
+.infoAlert {
+	padding: 5px 0 15px;
+}

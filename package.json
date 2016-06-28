@@ -1,0 +1,29 @@
+{
+  "name": "zillow-api",
+  "version": "1.0.0",
+  "description": "implementing with the zillow api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshDoesDesign/zillow-api-plus-angular.git"
+  },
+  "author": "Josh Kneeland",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-sass": "^2.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/JoshDoesDesign/zillow-api-plus-angular/issues"
+  },
+  "homepage": "https://github.com/JoshDoesDesign/zillow-api-plus-angular#readme"
+}

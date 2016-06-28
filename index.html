@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="zillowApp">
+	<head>
+	    <meta charset="utf-8">
+	    <title>Zillow API Application</title>
+	    <meta name="description" content="">
+	    <meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body ng-controller="zillowCtrl">
+
+		<div class="container">
+
+				<h2>Zillow API Integration | Mortgage Rates</h2>
+				<hr>
+
+			<div ng-show=" stateBinding == '' " class="infoAlert">
+				<em>Please select a state to display your requested data</em>
+			</div>
+
+			<select id="stateSelection" ng-model="stateBinding" ng-change="changeState()">
+				<option ng-repeat="state in states" value="{{state.code}}">{{state.name}}</option>
+			</select>
+
+			<h4 class="stateTitle" ng-cloak >State Selected: {{ stateName }} </h4>
+
+			<div ng-if="stateBinding">
+				<h4>Mortgage Data</h4>
+				<hr>
+				<h5>Today</h5>
+				<ul>
+					<li>Thirty Year Fixed: {{ mortgageLocation.response.today.thirtyYearFixed }}</li>
+				</ul>
+				<h5>Last Week</h5>
+				<ul>
+					<li>Thirty Year Fixed: {{ mortgageLocation.response.lastWeek.thirtyYearFixed }}</li>
+				</ul>				
+			</div>
+			
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+			<script src="controller.js"></script>
+		</div> <!-- End of Container -->
+
+	</body>
+</html>
